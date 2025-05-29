@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://search.brave.com/search?q=\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "https://www\\.google\\.com/search\\?.*?[&?]q=([^&#]+).*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://search.brave.com/search?q=\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "https://www\\.google\\.it/search\\?.*?[&?]q=([^&#]+).*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

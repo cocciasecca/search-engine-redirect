@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Google to Brave Search Redirect Clean",
+  "version": "1.0",
+  "description": "Reindirizza le ricerche Google a Brave Search portando solo il parametro q.",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://www.google.it/*",
+    "https://www.google.co.uk/*",
+    "https://www.google.de/*",
+    "https://www.google.fr/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "redirectRules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
