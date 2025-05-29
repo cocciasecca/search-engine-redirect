@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>S.E.R. Settings</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 15px; width: 300px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"] { width: calc(100% - 20px); padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        small { display: block; margin-bottom: 15px; color: #666; }
+        button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #45a049; }
+        #status { margin-top: 15px; font-weight: bold; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Redirect Search Settings</h1>
+
+    <label for="searchEngineUrl">Search engine (base URL):</label>
+    <input type="text" id="searchEngineUrl" value="https://search.brave.com/search">
+    <small>Example: https://search.brave.com/search (must not include "?q=%s" or other stuff)</small>
+
+    <label for="additionalOptions">Additional options (after search query):</label>
+    <input type="text" id="additionalOptions" value="">
+    <small>Example: &p=1&lang=en (make sure to add a '&' character for every option)</small>
+
+    <button id="saveSettings">Save settings</button>
+
+    <div id="status"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
